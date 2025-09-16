@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -8,6 +10,17 @@ plugins {
 }
 
 android {
+    val properties = Properties()
+    properties.load(project.rootProject.file("local.properties").inputStream())
+
+    signingConfigs {
+        create("release") {
+            storeFile = rootProject.file("keystore/release.jks")
+            storePassword = properties.getProperty("RELEASE_STORE_PASSWORD")
+            keyAlias = properties.getProperty("RELEASE_KEY_ALIAS")
+            keyPassword = properties.getProperty("RELEASE_KEY_PASSWORD")
+        }
+    }
     namespace = "io.github.yuu0922.lrinsight"
     compileSdk {
         version = release(36)
@@ -29,7 +42,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {
