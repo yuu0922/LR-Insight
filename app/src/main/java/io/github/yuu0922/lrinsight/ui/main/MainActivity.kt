@@ -18,9 +18,11 @@ import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.ScaffoldDefaults
@@ -41,6 +43,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import io.github.yuu0922.lrinsight.R
 import io.github.yuu0922.lrinsight.prefs.AppPrefs
 import io.github.yuu0922.lrinsight.ui.components.RetryableErrorDialog
+import io.github.yuu0922.lrinsight.ui.settings.SettingsDialog
 import io.github.yuu0922.lrinsight.ui.theme.AppTheme
 import io.github.yuu0922.lrinsight.util.AppUtils.openUrl
 import io.github.yuu0922.lrinsight.util.LRUtils.getRangerPageUrl
@@ -64,6 +67,7 @@ class MainActivity : ComponentActivity() {
 
                 var showRankSelector by remember { mutableStateOf(false) }
                 var showRangerUsageRate by remember { mutableStateOf(false) }
+                var showSettings by remember { mutableStateOf(false) }
                 val selectedRank by viewModel.selectedRank.collectAsState()
                 val rankPlayers by viewModel.rankPlayers.collectAsState()
                 val isRefreshing by viewModel.isRefreshing.collectAsState()
@@ -101,6 +105,17 @@ class MainActivity : ComponentActivity() {
                                             text = stringResource(R.string.ranger_usage_rate)
                                         )
                                     }
+
+                                    Spacer(Modifier.weight(1f))
+
+                                    IconButton(
+                                        onClick = { showSettings = true }
+                                    ) {
+                                        Icon(
+                                            imageVector = Icons.Default.Menu,
+                                            contentDescription = "Open Settings"
+                                        )
+                                    }
                                 }
                             }
                         )
@@ -131,6 +146,14 @@ class MainActivity : ComponentActivity() {
                                 players = rankPlayers,
                                 onDismiss = {
                                     showRangerUsageRate = false
+                                }
+                            )
+                        }
+
+                        if (showSettings) {
+                            SettingsDialog(
+                                onDismiss = {
+                                    showSettings = false
                                 }
                             )
                         }

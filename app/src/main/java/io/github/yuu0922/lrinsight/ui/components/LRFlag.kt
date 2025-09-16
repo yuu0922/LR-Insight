@@ -1,4 +1,4 @@
-package io.github.yuu0922.lrinsight.ui.main
+package io.github.yuu0922.lrinsight.ui.components
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
@@ -58,7 +58,7 @@ private val flagMap = mapOf(
 )
 
 @Composable
-fun Flag(
+fun LRFlag(
     modifier: Modifier = Modifier,
     flag: String,
     outline: Boolean = true

@@ -22,4 +22,7 @@
     <string name="error">エラー</string>
     <string name="retry">再試行</string>
     <string name="ranger_usage_rate">レンジャー使用率</string>
+    <string name="use_custom_tabs">カスタムタブを使用する</string>
+    <string name="settings">設定</string>
+    <string name="credit">クレジット</string>
 </resources>

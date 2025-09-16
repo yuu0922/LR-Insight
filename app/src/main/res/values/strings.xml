@@ -21,4 +21,7 @@
     <string name="error">Error</string>
     <string name="retry">Retry</string>
     <string name="ranger_usage_rate">Ranger usage rate</string>
+    <string name="use_custom_tabs">Use custom tabs</string>
+    <string name="settings">Settings</string>
+    <string name="credit">Credit</string>
 </resources>

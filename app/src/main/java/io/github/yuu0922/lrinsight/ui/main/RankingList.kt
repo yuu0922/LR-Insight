@@ -41,6 +41,7 @@ import io.github.yuu0922.lrinsight.domain.model.rank.RankGuild
 import io.github.yuu0922.lrinsight.domain.model.rank.RankPlayer
 import io.github.yuu0922.lrinsight.domain.model.rank.RankPvpTeam
 import io.github.yuu0922.lrinsight.domain.model.rank.RankRanger
+import io.github.yuu0922.lrinsight.ui.components.LRFlag
 import io.github.yuu0922.lrinsight.ui.theme.AppTheme
 import io.github.yuu0922.lrinsight.util.LRUtils.formatPlayerLevel
 import io.github.yuu0922.lrinsight.util.LRUtils.getRangerImageUrl
@@ -179,7 +180,7 @@ fun PlayerInfoRow(player: RankPlayer) {
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Flag(
+        LRFlag(
             flag = player.nationalFlag,
             modifier = Modifier.width(24.dp)
         )
@@ -213,7 +214,7 @@ fun GuildInfoRow(guild: RankGuild?) {
                 text = stringResource(R.string.guild_not_joined)
             )
         } else {
-            Flag(
+            LRFlag(
                 flag = guild.nationalFlag,
                 modifier = Modifier.width(24.dp)
             )
