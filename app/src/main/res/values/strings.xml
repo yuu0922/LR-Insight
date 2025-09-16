@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">LR Insight</string>
+
+    <string name="rank_legend">Legend</string>
+    <string name="rank_master_1">Master I</string>
+    <string name="rank_master_2">Master II</string>
+    <string name="rank_master_3">Master III</string>
+    <string name="rank_diamond_1">Diamond I</string>
+    <string name="rank_diamond_2">Diamond II</string>
+    <string name="rank_diamond_3">Diamond III</string>
+    <string name="rank_gold_1">Gold I</string>
+    <string name="rank_gold_2">Gold II</string>
+    <string name="rank_gold_3">Gold III</string>
+    <string name="rank_silver_1">Silver I</string>
+    <string name="rank_silver_2">Silver II</string>
+    <string name="rank_silver_3">Silver III</string>
+    <string name="rank_bronze">Bronze</string>
+
+    <string name="guild_not_joined">Not in a Guild</string>
+    
+    <string name="error">Error</string>
+    <string name="retry">Retry</string>
+    <string name="ranger_usage_rate">Ranger usage rate</string>
+</resources>

@@ -1,0 +1,1 @@
+package io.github.yuu0922.lrinsight.ui.theme

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LR Insight</string>
+
+    <string name="rank_legend">レジェンド</string>
+    <string name="rank_master_1">マスター I</string>
+    <string name="rank_master_2">マスター II</string>
+    <string name="rank_master_3">マスター III</string>
+    <string name="rank_diamond_1">ダイヤモンド I</string>
+    <string name="rank_diamond_2">ダイヤモンド II</string>
+    <string name="rank_diamond_3">ダイヤモンド III</string>
+    <string name="rank_gold_1">ゴールド I</string>
+    <string name="rank_gold_2">ゴールド II</string>
+    <string name="rank_gold_3">ゴールド III</string>
+    <string name="rank_silver_1">シルバー I</string>
+    <string name="rank_silver_2">シルバー II</string>
+    <string name="rank_silver_3">シルバー III</string>
+    <string name="rank_bronze">ブロンズ</string>
+
+    <string name="guild_not_joined">ギルドに所属していません</string>
+
+    <string name="error">エラー</string>
+    <string name="retry">再試行</string>
+    <string name="ranger_usage_rate">レンジャー使用率</string>
+</resources>
