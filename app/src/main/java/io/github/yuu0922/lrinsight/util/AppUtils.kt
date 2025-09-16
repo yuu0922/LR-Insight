@@ -21,7 +21,8 @@ object AppUtils {
         }
     }
 
-    fun getAppUserAgent(): String {
-        return ""
+    fun getAppUserAgent(context: Context): String {
+        val versionName = context.packageManager.getPackageInfo(context.packageName, 0).versionName
+        return "LR-Insight/${versionName}"
     }
 }
